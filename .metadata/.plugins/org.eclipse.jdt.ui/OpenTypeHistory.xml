@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=msclientes/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.eduardooliveiradev.msclientes.domain{Cliente.java[Cliente" modifiers="1" timestamp="1709774089869"/>
+    <typeInfo handle="=msclientes/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.eduardooliveiradev.msclientes.controller{ClienteController.java[ClienteController" modifiers="1" timestamp="1709850827022"/>
+    <typeInfo handle="=eurekaserver/C:\/Users\/Eduardo\/.m2\/repository\/com\/google\/guava\/guava\/19.0\/guava-19.0.jar=/maven.pomderived=/true=/=/maven.groupId=/com.google.guava=/=/maven.artifactId=/guava=/=/maven.version=/19.0=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;com.google.common.base(Supplier.class[Supplier" modifiers="1537" timestamp="1702334323513"/>
+    <typeInfo handle="=eurekaserver/C:\/Users\/Eduardo\/.m2\/repository\/com\/google\/guava\/guava\/19.0\/guava-19.0.jar=/maven.pomderived=/true=/=/maven.groupId=/com.google.guava=/=/maven.artifactId=/guava=/=/maven.version=/19.0=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;com.google.common.base(Predicate.class[Predicate" modifiers="1537" timestamp="1702334323513"/>
+</typeInfoHistroy>

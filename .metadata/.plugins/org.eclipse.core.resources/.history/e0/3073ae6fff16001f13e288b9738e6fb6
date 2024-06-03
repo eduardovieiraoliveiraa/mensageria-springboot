@@ -1,0 +1,15 @@
+package features;
+
+public class UnnamedPatternsAndVariables {
+
+	public static void main(String[] args) {
+		
+		String userInput = "User Input";
+		try {
+		int number = Integer.parseInt(userInput);
+		// Use 'number'
+		} catch (NumberFormatException _) {
+		System.out.println("Invalid input: " + userInput);
+		}
+	}
+}

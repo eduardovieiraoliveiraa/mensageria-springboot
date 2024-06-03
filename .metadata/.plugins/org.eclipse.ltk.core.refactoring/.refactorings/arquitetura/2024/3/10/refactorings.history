@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;AbstractEntity.java&apos; to &apos;msarquitetura/src/main/java/com.eduardooliveiradev.msarquitetura.domain&apos;&#x0D;&#x0A;- Original project: &apos;arquitetura&apos;&#x0D;&#x0A;- Destination element: &apos;msarquitetura/src/main/java/com.eduardooliveiradev.msarquitetura.domain&apos;&#x0D;&#x0A;- Original element: &apos;com.eduardooliveiradev.arquitetura.domain.AbstractEntity.java&apos;" description="Copy compilation unit" destination="=msarquitetura/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.eduardooliveiradev.msarquitetura.domain" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.eduardooliveiradev.arquitetura.domain{AbstractEntity.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1709773695236" units="1" version="1.0"/>
+</session>
