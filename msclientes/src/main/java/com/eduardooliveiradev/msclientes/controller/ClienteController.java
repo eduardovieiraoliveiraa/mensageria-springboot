@@ -1,6 +1,7 @@
 package com.eduardooliveiradev.msclientes.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,26 +23,17 @@ public class ClienteController extends AbstractController<Cliente, ClienteDTO>{
 	@Autowired
     private ClienteService clienteService;
 	
+	@Autowired
+	private Environment environment;
+	
 	@GetMapping("/status")
 	public String status() {
-		return "ok";
+		String porta = environment.getProperty("local.server.port");
+		
+		return "ok - server port: " + porta;
 	}
 	
-//	@PostMapping
-//	public ResponseEntity<URI> save(@RequestBody ClienteDTO clienteDto) {
-//		Cliente cliente = convertToEntity(clienteDto);
-//		
-//		clienteService.save(cliente);
-//		
-//		URI headerLocation = ServletUriComponentsBuilder
-//							.fromCurrentRequest()
-//							.query("cpf={cpf}")
-//							.buildAndExpand(cliente.getCpf()).toUri();
-//		
-//		return ResponseEntity.created(headerLocation).build();
-//	}
-	
-	@RequestMapping("/consultar")
+	@GetMapping("/consultar")
 	public ResponseEntity<Cliente> consultarCliente(@RequestParam("cpf") String cpf){
 		Optional<Cliente> optionalCliente = clienteService.getByCpf(cpf);
 		

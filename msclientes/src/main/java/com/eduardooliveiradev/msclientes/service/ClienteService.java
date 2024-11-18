@@ -11,5 +11,4 @@ import br.com.eduardo.spring.arquitetura.arquiteturaspring.service.ICrudService;
 public interface ClienteService extends ICrudService<Cliente> {
 
 	Optional<Cliente> getByCpf(String cpf);
-
 }

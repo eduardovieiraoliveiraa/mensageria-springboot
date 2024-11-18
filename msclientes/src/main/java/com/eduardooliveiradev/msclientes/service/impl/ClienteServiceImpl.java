@@ -18,11 +18,19 @@ public class ClienteServiceImpl extends CrudServiceImpl<Cliente> implements Clie
 	public ClienteServiceImpl(ClienteRepository clienteRepository) {
 		this.clienteRepository = clienteRepository;
 	}
-	
 
 	@Override
 	public Optional<Cliente> getByCpf(String cpf){
 		return clienteRepository.findByCpf(cpf);
+	}
+	
+	@Override
+	public Cliente save(Cliente entity) {
+		Optional<Cliente> optionalCliente = getByCpf(entity.getCpf());
+		
+		if(optionalCliente.isPresent()) throw new RuntimeException("Já existe um cliente cadastrado com esse CPF.");
+		
+		return super.save(entity);
 	}
 
 	@Override
