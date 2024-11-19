@@ -2,7 +2,6 @@ package com.eduardooliveiradev.msclientes.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -34,12 +33,12 @@ public class ClienteController extends AbstractController<Cliente, ClienteDTO>{
 	}
 	
 	@GetMapping("/consultar")
-	public ResponseEntity<Cliente> consultarCliente(@RequestParam("cpf") String cpf){
+	public ClienteDTO consultarCliente(@RequestParam("cpf") String cpf){
 		Optional<Cliente> optionalCliente = clienteService.getByCpf(cpf);
 		
-		if(optionalCliente.isPresent()) return ResponseEntity.ok(optionalCliente.get());
-	
-		return ResponseEntity.notFound().build();
+		if(!optionalCliente.isPresent()) throw new RuntimeException("Cliente não cadastrado!");
+		
+		return convertToDTO(optionalCliente.get());
 	}
 
 	@Override
