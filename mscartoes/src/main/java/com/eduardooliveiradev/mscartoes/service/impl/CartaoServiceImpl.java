@@ -27,6 +27,16 @@ public class CartaoServiceImpl extends CrudServiceImpl<Cartao> implements Cartao
 		
 		return cartaoRepository.findByRendaLessThanEqual(rendaCartao);
 	}
+	
+	@Override
+	public Cartao save(Cartao entity) {
+		List<Cartao> cartoes = cartaoRepository.findByNomeAndBandeira(entity.getNome(), entity.getBandeira());
+		
+		if(!cartoes.isEmpty()) 
+			throw new RuntimeException("Cartão ja cadastrado.");
+		
+		return super.save(entity);
+	}
 
 	@Override
 	public JpaRepository<Cartao, Long> getRepository() {
